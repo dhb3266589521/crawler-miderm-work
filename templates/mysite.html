@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div style="text-align: center;font-size: 20px">
+        <a style="font-size: x-large;color: red;font-weight: bold">欢迎来到我的主页！
+        <p>下面分享豆瓣新片榜前10</p></a>
+
+        <p></p>
+
+        <table border="1" align="center">
+            <tr>
+                <td align="center" style="color: blue">
+                    电影名称
+                </td>
+                <td align="center" style="color: blue">
+                    主要演员
+                </td>
+            </tr>
+            {% for i in data.all %}
+                <tr>
+                    <td>
+                        《{{ i.title }}》
+                    </td>
+                    <td>
+                        {{ i.short_actor }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
+</body>
+</html>
